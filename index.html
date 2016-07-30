@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>basic-trivia-game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../TriviaGame/assets/images" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+      <h1>Totally Trivial Trivia!</h1>
+      <button id="start">Start</button>
+
+    <div class="timer">
+      <h3 id="timer" hidden>Time Remaining: </h3>
+    </div>
+
+    <div class="listOfQuestions" hidden>
+    <div class="q1">
+      <div class="btn-group" data-toggle="buttons">
+        <h3>What was the first production 9000 RPM car?</h3>
+        <input type="radio" value = "Honda S2000" name="question1" id="option1" autocomplete="off"> Honda S2000
+        <input type="radio" value = "Ferrari" name="question1" id="option2" autocomplete="off"> Ferrari
+        <input type="radio" value = "Lamborghini" name="question1" id="option3" autocomplete="off"> Lamborghini
+        <input id="questionOneCorrect" type="hidden" value="Honda S2000" />
+      </div>
+    </div>
+    <div class="q2">
+      <div class="btn-group" data-toggle="buttons">
+        <h3>Which car is also goes by the name by AP1?</h3>
+        <input type="radio" value = "Mazda Miata" name="question2" id="option1" autocomplete="off"> Mazda Miata
+        <input type="radio" value = "BMW Z4" name="question2" id="option2" autocomplete="off"> BMW Z4
+        <input type="radio" value = "Honda S2000" name="question2" id="option3" autocomplete="off"> Honda S2000
+        <input id="questionTwoCorrect" type="hidden" value="Honda S2000" />
+      </div>
+    </div>
+    <div class="q3">
+      <div class="btn-group" data-toggle="buttons">
+        <h3>Which of these cars ended production in 1999?</h3>
+        <input type="radio" value = "Subaru STI hatch" name="question3" id="option1" autocomplete="off"> Subaru STI hatch
+        <input type="radio" value = "Honda S2000" name="question3" id="option2" autocomplete="off"> Honda S2000
+        <input type="radio" value = "Volks Wagon GTI" name="question3" id="option3" autocomplete="off"> Volks Wagon GTI
+      </div>
+      <input id="questionThreeCorrect" type="hidden" value="Honda S2000" />
+    </div>    
+    <button id="finish">Finish</button>
+    </div>
+    <div class="results" hidden>
+        <h3 id="correctNum">Correct Answers: </h3>
+        <h3 id="incorrectNum">Incorrect Answers: </h3>
+    </div>
+  </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="assets/javascript/app.js"></script>
+
+</html>
