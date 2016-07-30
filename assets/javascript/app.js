@@ -3,11 +3,11 @@ var correctAnswers = 0;
 var wrongAnswers = 0;
 var counter;
 
-
+// stored into memory when page loads
 $("#start").on("click", start);
 $("#finish").on("click", finish);
 
-function start(){
+function start(){  //when start btn clicked only the hidden qestions are shown; counter starts
 
 	counter = setInterval(decrease, 1000);
 	$(".listOfQuestions").show(); 
@@ -16,12 +16,11 @@ function start(){
 	$("#start").hide();
 }
 
-function decrease(){
+function decrease(){ 
 
 	timer--;
 	$("#timer").html("Time Remaining: " + timer + " seconds");
 	if (timer === 0){
-		alert("Time Up!");
 		finish();
 	}
 }

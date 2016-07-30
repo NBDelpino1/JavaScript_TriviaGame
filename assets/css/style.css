@@ -22,4 +22,14 @@
 }
 h1{
 	font-size: 100px;
+	font-family: 'Fascinate Inline', cursive;
 }
+#timer{
+	color: red;
+	font-family: 'Fascinate Inline', cursive;
+	font-size: 35px;
+}
+input[type="radio"]{
+  margin: 15px 20px;
+}
+
