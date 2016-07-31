@@ -1,35 +1,51 @@
-#start,
-#finish{
-	height: 50px;
-	width: 200px;
-	margin: 20px;
-	background: #93ea2d;
-	color: white;
-	border-radius: 5px;
-}
-.wrapper{
-	text-align: center;
-	font-family: 'Shadows Into Light';
-	background-color: grey;
-	height: 760px;
-	width: auto;
-	margin: auto;
-	padding: 10px;
-	color: #93ea2d;
-	background: url(../../assets/images/use.jpg);
-	background-repeat:no-repeat;
-	background-size: cover;
-}
-h1{
-	font-size: 100px;
-	font-family: 'Fascinate Inline', cursive;
-}
-#timer{
-	color: red;
-	font-family: 'Fascinate Inline', cursive;
-	font-size: 35px;
-}
-input[type="radio"]{
-  margin: 15px 20px;
+#start,#finish {  
+    height: 50px;
+    width: 200px;
+    margin: 20px;
+    background: #93ea2d;
+    color: #fff;
+    border-radius: 5px;
 }
 
+.listOfQuestions {
+    color: #fff;
+    font-size: 20px;
+}
+
+.wrapper {
+    text-align: center;
+    font-family: 'Shadows Into Light';
+    background: url(../../assets/images/purple.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: grey;
+    height: 760px;
+    width: auto;
+    margin: auto;
+    padding: 10px;
+    color: #93ea2d;
+}
+
+h1 {
+    font-size: 80px;
+    font-family: 'Fascinate Inline',cursive;
+    margin: 50px;
+}
+
+h3 {
+    color: #93ea2d;
+}
+
+input[type="radio"] {
+    margin: 15px 20px;
+}
+
+#timer {
+    color: red;
+    font-family: 'Fascinate Inline',cursive;
+    font-size: 35px;
+}
+
+#incorrectNum {
+    color: red;
+}
