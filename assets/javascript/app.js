@@ -1,37 +1,42 @@
-//event listeners added / stored into memory
-$("#start").on("click", start);
-$("#finish").on("click", finish);
-//game variables declared 
-var timer = 35; // user has 35 secs
-var correctAnswers = 0; // correct answers 
-var wrongAnswers = 0; // wrong answers
-var counter; //clock
-var audioElement = document.createElement('audio'); //audio 
-audioElement.setAttribute('src', '../TriviaGame/assets/jpdy.mp3'); //audio file
-// game starts when start btn is clicked by user
+$("#start").on("click", start); //start button event listener runs start function
+$("#finish").on("click", finish); //finish button event listener runs finish function
+//variables declared:
+var timer = 35; //sets total time user has to answer questions
+var correctAnswers = 0; //store correct answers so can be compared
+var wrongAnswers = 0; //store wrong answers so can be compared
+var counter; 
+var audioElement = document.createElement('audio'); 
+audioElement.setAttribute('src', '../TriviaGame/assets/jpdy.mp3'); //theme audio
+var audioElement1 = document.createElement('audio'); 
+audioElement1.setAttribute('src', '../TriviaGame/assets/applause.mp3'); //applause audio
+var audioElement2 = document.createElement('audio'); 
+audioElement2.setAttribute('src', '../TriviaGame/assets/boo.mp3');  //boo audio
+//start function runs after user clicks the start button
 function start() {
-    audioElement.currentTime = 0 //set audio to beginning of file
-    audioElement.play(); //start audio
-    counter = setInterval(decrease, 1000); //set timer to decrease by 1 sec
-    $(".listOfQuestions").show(); //show list of questions that were initially hidden from view
-    $("#timer").show(); //show timer that was initially hidden from view
+    audioElement1.pause(); //applause paused incase user immdeiately clicks start after last game
+    audioElement2.pause(); //boo paused incase user immdeiately clicks start after last game
+    audioElement.currentTime = 0; //theme song set to 0 so will start from begining evertime starbutton clicked
+    audioElement.play(); //theme song starts
+    counter = setInterval(decrease, 1000); //timer will decrease in increments of 1 sec
+    $(".listOfQuestions").show(); //show user the list of questions that were hidden before the game started
+    $("#timer").show(); //show user the timer that was hidden before game started
     $(".results").hide(); //hide results div from view
     $("#start").hide(); //hide start btn from view
 }
-
+//decrease function decreases time and displays on page
 function decrease() {
     timer--; //user time starts decreasing because game has started
-    $("#timer").html("Time Remaining: " + timer + " seconds"); //Time placed into HTML for user view
+    $("#timer").html("Time Remaining: " + timer + " seconds"); //time displayed in html is user can see
     if (timer === 0) {
         finish(); //game ends (finish function called) when time left =  0 secs
     }
 }
-
-function finish() { // if time runs out of user clicks finish btn game is over (finish function)
-    clearInterval(counter); //clock reset
-    timer = 35; //timer reset
-    correctAnswers = 0; //correct answers reset
-    wrongAnswers = 0; //wrong answeres reset
+//finish function runs if time is up or user clicks finish btn 
+function finish() { 
+    clearInterval(counter); //counter cleared
+    timer = 35; //timer reset to 35 secs 
+    correctAnswers = 0; //correct answers reset to 0
+    wrongAnswers = 0; //wrong answeres reset to 0
     audioElement.pause(); //audio paused
     $(".listOfQuestions").hide(); //hide list of questions from user
     $("#timer").hide(); //hide timer from user
@@ -56,6 +61,11 @@ function finish() { // if time runs out of user clicks finish btn game is over (
         correctAnswers++;
     } else {
         wrongAnswers++;
+    }
+    if (correctAnswers < 4) { // if user score is < 4 boo else applaud for they have won
+        audioElement2.play();
+    } else {
+        audioElement1.play();
     }
     // console.log("You got this many questions right " + correctAnswers);
     // console.log("You got this many questions right " + wrongAnswers);

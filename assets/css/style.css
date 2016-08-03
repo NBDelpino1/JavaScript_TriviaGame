@@ -1,3 +1,6 @@
+body { 
+min-width: 800px;
+ }
 #start,#finish {  
     height: 50px;
     width: 200px;
@@ -5,6 +8,12 @@
     background: #93ea2d;
     color: #fff;
     border-radius: 5px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-size: 20px;
+}
+#start:hover, #finish:hover {
+    background-color: #71bd18;
 }
 
 .listOfQuestions {
@@ -19,7 +28,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: grey;
-    height: 760px;
+    height: 800px;
     width: auto;
     margin: auto;
     padding: 10px;
@@ -49,3 +58,4 @@ input[type="radio"] {
 #incorrectNum {
     color: red;
 }
+

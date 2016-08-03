@@ -4,80 +4,62 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>basic-trivia-game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="assets/css/style.css" rel="stylesheet">
+<title>basic-trivia-game</title>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity=
+    "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Fascinate+Inline' rel='stylesheet' type='text/css'>
     <link href="../TriviaGame/assets/images" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-
 <body>
-  <div class="wrapper">  <!--Div .wrapper-->
-
-      <h1>Totally Trivial Trivia!</h1>    <!--Header-->
-
-      <button id="start">Start</button>   <!--Start button-->
-
-    <div class="timer">
-      <h3 id="timer" hidden>Time Remaining: </h3>   <!--Timer-->
+    <div class="wrapper">
+        <h1>Totally Trivial Trivia!</h1><button id="start">Start</button> <!--start button-->
+        <div class="timer">
+            <h3 hidden="" id="timer">Time Remaining:</h3><!--timer-->
+        </div>
+        <div class="listOfQuestions" hidden="">
+            <!--list of questions-->
+            <div class="q1">
+                <div class="btn-group" data-toggle="buttons">
+                    <h3>What is the name Canadian born rapper that hails from the "6"?</h3><input autocomplete="off" id="option1" name=
+                    "question1" type="radio" value="Slick Rick"> Slick Rick <input autocomplete="off" id="option2" name="question1" type=
+                    "radio" value="Drake"> Drake <input autocomplete="off" id="option3" name="question1" type="radio" value="Puff Daddy">
+                    Puff Daddy <input id="questionOneCorrect" type="hidden" value="Drake">
+                </div>
+            </div>
+            <div class="q2">
+                <div class="btn-group" data-toggle="buttons">
+                    <h3>What was the first product to ever have a bar code?</h3><input autocomplete="off" id="option1" name="question2"
+                    type="radio" value="Wriggleys Gum"> Wriggleys Gum <input autocomplete="off" id="option2" name="question2" type="radio"
+                    value="Coke"> Coke <input autocomplete="off" id="option3" name="question2" type="radio" value="Pepsi Cola"> Pepsi Cola
+                    <input id="questionTwoCorrect" type="hidden" value="Wriggleys Gum">
+                </div>
+            </div>
+            <div class="q3">
+                <div class="btn-group" data-toggle="buttons">
+                    <h3>Which celebrity is most famous for the junk in her trunk?</h3><input autocomplete="off" id="option1" name=
+                    "question3" type="radio" value="Serena Williams"> Serena Williams <input autocomplete="off" id="option2" name=
+                    "question3" type="radio" value="Kim Kardashian"> Kim Kardashian <input autocomplete="off" id="option3" name="question3"
+                    type="radio" value="Linsey 'Fire Crotch' Lohan"> Linsey 'Fire Crotch' Lohan
+                </div><input id="questionThreeCorrect" type="hidden" value="Kim Kardashian">
+            </div>
+            <div class="q4">
+                <div class="btn-group" data-toggle="buttons">
+                    <h3>What is the name of the "leader of the Autobots" in Transformers the movie?</h3><input autocomplete="off" id=
+                    "option1" name="question4" type="radio" value="Optimus Prime"> Optimus Prime <input autocomplete="off" id="option2"
+                    name="question4" type="radio" value="Bumble Bee"> Bumble Bee <input autocomplete="off" id="option3" name="question4"
+                    type="radio" value="Megatron"> Megatron
+                </div><input id="questionFourCorrect" type="hidden" value="Optimus Prime">
+            </div><button id="finish">Finish</button> <!--finish button-->
+        </div>
+        <div class="results" hidden="">
+            <h3 id="correctNum">Correct Answers:</h3>
+            <h3 id="incorrectNum">Incorrect Answers:</h3><!--results show / hide-->
+        </div>
     </div>
-
-    <div class="listOfQuestions" hidden>   <!--Div .listOfQuestions-->
-
-    <div class="q1">
-      <div class="btn-group" data-toggle="buttons">
-        <h3>What is the name Canadian born rapper that hails from the "6"?</h3>
-        <input type="radio" value = "Slick Rick" name="question1" id="option1" autocomplete="off"> Slick Rick
-        <input type="radio" value = "Drake" name="question1" id="option2" autocomplete="off"> Drake
-        <input type="radio" value = "Puff Daddy" name="question1" id="option3" autocomplete="off"> Puff Daddy
-        <input id="questionOneCorrect" type="hidden" value="Drake" />
-      </div>  <!--Question1-->
-    </div>
-
-    <div class="q2">
-      <div class="btn-group" data-toggle="buttons">
-        <h3>What was the first product to ever have a bar code?</h3>
-        <input type="radio" value = "Wriggleys Gum" name="question2" id="option1" autocomplete="off"> Wriggleys Gum
-        <input type="radio" value = "Coke" name="question2" id="option2" autocomplete="off"> Coke
-        <input type="radio" value = "Pepsi Cola" name="question2" id="option3" autocomplete="off"> Pepsi Cola
-        <input id="questionTwoCorrect" type="hidden" value="Wriggleys Gum" />
-      </div>  <!--Question2-->
-    </div>
-
-    <div class="q3">
-      <div class="btn-group" data-toggle="buttons">
-        <h3>Which celebrity is most famous for the junk in her trunk?</h3>
-        <input type="radio" value = "Serena Williams" name="question3" id="option1" autocomplete="off"> Serena Williams
-        <input type="radio" value = "Kim Kardashian" name="question3" id="option2" autocomplete="off"> Kim Kardashian
-        <input type="radio" value = "Linsey 'Fire Crotch' Lohan" name="question3" id="option3" autocomplete="off"> Linsey 'Fire Crotch' Lohan
-      </div>
-      <input id="questionThreeCorrect" type="hidden" value="Kim Kardashian" />  <!--Question3-->
-    </div>
-
-    <div class="q4">
-      <div class="btn-group" data-toggle="buttons">
-        <h3>What is the name of the "leader of the Autobots" in Transformers the movie?</h3>
-        <input type="radio" value = "Optimus Prime" name="question4" id="option1" autocomplete="off"> Optimus Prime 
-        <input type="radio" value = "Bumble Bee" name="question4" id="option2" autocomplete="off"> Bumble Bee
-        <input type="radio" value = "Megatron" name="question4" id="option3" autocomplete="off"> Megatron
-      </div>
-      <input id="questionFourCorrect" type="hidden" value="Optimus Prime" />  <!--Question4-->
-    </div>  
-
-        <button id="finish">Finish</button>
-
-    </div>
-
-    <div class="results" hidden>
-        <h3 id="correctNum">Correct Answers: </h3>
-        <h3 id="incorrectNum">Incorrect Answers: </h3>  <!--Results Display / Hidden-->
-    </div>
-
-  </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script> 
+    <script src="assets/javascript/app.js">
+    </script> 
 </body>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-  <script src="assets/javascript/app.js"></script>
-
 </html>
