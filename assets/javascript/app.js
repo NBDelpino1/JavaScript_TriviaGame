@@ -37,6 +37,8 @@ function finish() {
     timer = 35; //timer reset to 35 secs 
     correctAnswers = 0; //correct answers reset to 0
     wrongAnswers = 0; //wrong answeres reset to 0
+    audioElement1.currentTime = 0;//reset applause so always plays from start
+    audioElement2.currentTime = 0;//reset boo so always plays from start
     audioElement.pause(); //audio paused
     $(".listOfQuestions").hide(); //hide list of questions from user
     $("#timer").hide(); //hide timer from user
