@@ -59,3 +59,11 @@ input[type="radio"] {
     color: red;
 }
 
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+}
+
+#timer{
+    animation: fadeIn 1s infinite alternate;
+}
+
