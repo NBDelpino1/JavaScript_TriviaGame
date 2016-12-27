@@ -1,69 +1,111 @@
-body { 
-min-width: 800px;
- }
-#start,#finish {  
-    height: 50px;
-    width: 200px;
-    margin: 20px;
-    background: #93ea2d;
-    color: #fff;
-    border-radius: 5px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    font-size: 20px;
-}
-#start:hover, #finish:hover {
-    background-color: #71bd18;
-}
+/*body { */
+/*min-width: 800px;*/
+ /*}*/
+/*#start,#finish {  */
+    /*height: 50px;*/
+    /*width: 200px;*/
+    /*margin: 20px;*/
+    /*background: #93ea2d;*/
+    /*color: #fff;*/
+    /*border-radius: 5px;*/
+    /*-webkit-transition-duration: 0.4s;*/
+    /*transition-duration: 0.4s;*/
+    /*font-size: 20px;*/
+/*}*/
+/*#start:hover, #finish:hover {*/
+    /*background-color: #71bd18;*/
+/*}*/
 
-.listOfQuestions {
-    color: #fff;
-    font-size: 20px;
-}
+/*.listOfQuestions {*/
+    /*color: #fff;*/
+    /*font-size: 20px;*/
+/*}*/
 
-.wrapper {
-    text-align: center;
-    font-family: 'Shadows Into Light';
-    background: url(../../assets/images/purple.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: grey;
-    height: 800px;
-    width: auto;
-    margin: auto;
-    padding: 10px;
-    color: #93ea2d;
-}
+/*.wrapper {*/
+    /*text-align: center;*/
+    /*font-family: 'Shadows Into Light';*/
+    /*background: url(../../assets/images/purple.jpg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-color: grey;*/
+    /*height: 800px;*/
+    /*width: auto;*/
+    /*margin: auto;*/
+    /*padding: 10px;*/
+    /*color: #93ea2d;*/
+/*}*/
 
-h1 {
-    font-size: 80px;
+/*h1 {*/
+    /*font-size: 80px;*/
+    /*font-family: 'Fascinate Inline',cursive;*/
+    /*margin: 50px;*/
+/*}*/
+
+/*h3 {*/
+    /*color: #93ea2d;*/
+/*}*/
+
+/*input[type="radio"] {*/
+    /*margin: 15px 20px;*/
+/*}*/
+
+/*#timer {*/
+    /*color: red;*/
+    /*font-family: 'Fascinate Inline',cursive;*/
+    /*font-size: 35px;*/
+/*}*/
+
+/*#incorrectNum {*/
+    /*color: red;*/
+/*}*/
+
+/*@keyframes fadeIn { */
+  /*from { opacity: 0; } */
+/*}*/
+
+/*#timer{*/
+    /*animation: fadeIn 1s infinite alternate;*/
+/*}*/
+
+
+
+
+.jumbotron h1{
     font-family: 'Fascinate Inline',cursive;
-    margin: 50px;
 }
 
-h3 {
-    color: #93ea2d;
+.jumbotron {
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    /*background-color: transparent;*/
 }
 
-input[type="radio"] {
-    margin: 15px 20px;
+
+.progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
 }
 
-#timer {
-    color: red;
-    font-family: 'Fascinate Inline',cursive;
-    font-size: 35px;
+.page-header {
+    padding-bottom: 2px;
+    margin: 2px;
+    border-bottom: 1px solid #eee;
 }
 
-#incorrectNum {
-    color: red;
+/*The fixed navbar will overlay your other content,
+unless you add padding to the bottom of the <body>.
+Try out your own values or use our snippet below.
+Tip: By default, the navbar is 50px high.*/
+body { padding-bottom: 70px; }
+
+
+.hidden { display: none; }
+
+
+#questions {
+    font-size: 31px;
+    font-weight: 200;
 }
 
-@keyframes fadeIn { 
-  from { opacity: 0; } 
-}
 
-#timer{
-    animation: fadeIn 1s infinite alternate;
-}
 
